@@ -1,13 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import HeroVideo from "@/components/home/HeroVideo";
+import FeaturedCollection from "@/components/home/FeaturedCollection";
+import BrandStory from "@/components/home/BrandStory";
 
 const Index = () => {
+  useEffect(() => {
+    // Update page metadata
+    document.title = "DRIPENOMICS — Live . Breathe . Dress For It .";
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen">
+      <Navbar variant="transparent" />
+      <HeroVideo />
+      <FeaturedCollection />
+      <BrandStory />
+      <Footer />
+    </main>
   );
 };
 
