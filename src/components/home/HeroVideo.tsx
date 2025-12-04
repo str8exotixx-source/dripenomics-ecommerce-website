@@ -24,7 +24,7 @@ const HeroVideo = () => {
             City Stories — The Prelude Capsule
           </p>
           <h1 className="brand-title text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-6">
-            Launching June 2025
+            Launching January 2025
           </h1>
           <p className="text-primary-foreground/80 text-sm md:text-base max-w-md mx-auto mb-10">
             An editorial collection paying homage to the origins of our cultural heritage.
