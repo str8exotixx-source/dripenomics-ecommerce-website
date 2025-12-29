@@ -9,10 +9,12 @@ import {
 } from "@/components/ui/sheet";
 
 const navLinks = [
-  { name: "Shop", href: "/shop" },
+  { name: "Catalogue", href: "/shop" },
   { name: "Lookbooks", href: "/lookbooks" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Brand", href: "/about" },
+  { name: "Collaborations", href: "/collaborations" },
+  { name: "Events", href: "/events" },
+  { name: "Newsletters", href: "/newsletters" },
 ];
 
 const announcements = [
@@ -86,13 +88,13 @@ const Navbar = () => {
           </Sheet>
 
           {/* Desktop Nav Links - Left */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.slice(0, 2).map((link) => (
+          <div className="hidden lg:flex items-center space-x-6">
+            {navLinks.slice(0, 3).map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
                 className={cn(
-                  "brand-subtitle transition-opacity hover:opacity-60 text-foreground",
+                  "brand-subtitle text-sm transition-opacity hover:opacity-60 text-foreground",
                   location.pathname === link.href && "opacity-60"
                 )}
               >
@@ -110,13 +112,13 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Nav Links - Right */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.slice(2).map((link) => (
+          <div className="hidden lg:flex items-center space-x-6">
+            {navLinks.slice(3).map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
                 className={cn(
-                  "brand-subtitle transition-opacity hover:opacity-60 text-foreground",
+                  "brand-subtitle text-sm transition-opacity hover:opacity-60 text-foreground",
                   location.pathname === link.href && "opacity-60"
                 )}
               >

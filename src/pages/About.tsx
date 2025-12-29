@@ -1,7 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import editorialImage from "@/assets/editorial-horse.jpg";
-import productFront from "@/assets/product-prelude-front.jpg";
+import cityStories1 from "@/assets/city-stories-1.jpg";
+import collectors2 from "@/assets/collectors-2.jpg";
 
 const About = () => {
   return (
@@ -27,9 +27,9 @@ const About = () => {
       <section className="pb-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div className="editorial-image aspect-[3/4]">
+            <div className="editorial-image aspect-[3/4] max-w-md mx-auto lg:mx-0">
               <img
-                src={editorialImage}
+                src={cityStories1}
                 alt="Dripenomics editorial"
                 className="w-full h-full object-cover"
               />
@@ -103,9 +103,9 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="editorial-image aspect-[3/4] order-1 lg:order-2">
+            <div className="editorial-image aspect-[3/4] max-w-md mx-auto lg:mx-0 order-1 lg:order-2">
               <img
-                src={productFront}
+                src={collectors2}
                 alt="Dripenomics community"
                 className="w-full h-full object-cover"
               />

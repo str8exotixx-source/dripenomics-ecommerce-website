@@ -1,34 +1,41 @@
 import { Link } from "react-router-dom";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import editorialHorse from "@/assets/editorial-horse.jpg";
-import productBack from "@/assets/product-prelude-back.jpg";
-import productFront from "@/assets/product-prelude-front.jpg";
+import cityStories1 from "@/assets/city-stories-1.jpg";
+import cityStories2 from "@/assets/city-stories-2.jpg";
+import cityStories3 from "@/assets/city-stories-3.jpg";
+import cityStories4 from "@/assets/city-stories-4.jpg";
+import collectors1 from "@/assets/collectors-1.jpg";
+import collectors2 from "@/assets/collectors-2.jpg";
+import collectors3 from "@/assets/collectors-3.jpg";
+import collectors4 from "@/assets/collectors-4.jpg";
 
 const lookbooks = [
   {
     id: "city-stories",
-    title: "City Stories — The Prelude",
+    title: "City Stories",
     season: "AW25",
-    foreword: "Behind The Capsule",
+    foreword: "Foreword : Behind The Capsule",
     description: `When we first envisioned City Stories. It was far beyond trends and meaningless aesthetics. It was rather a quiet, deliberate act of remembering what was, what remains and what is yet to be. This capsule collection is a visual tribute to our origins — to those who were shaped by legacies of oppression and yet bloom beyond expectation. Just as a blue rose emerges from deep within a fountain of wilted ones.
 
-This capsule is grounded upon retro minimalism — a visual blueprint birthed from the historical architecture of the city. City Stories is a layered interplay of symbolism that carries the echoes of the evolution of our homeland. From the landmark of the resolute white horse — to the contrast use of colour introducing the narrative of the blue rose against the burgundy of the wilted roses. Every detail has been placed with intention. This is our gift from the heart of South Africa to the world.`,
-    coverImage: editorialHorse,
-    images: [editorialHorse, productFront, productBack],
+This capsule is grounded upon retro minimalism — a visual blueprint birthed from the historical architecture of the city. City Stories is a layered interplay of symbolism that carries the echoes of the evolution of our homeland. From the landmark of the resolute white horse — to the contrast use of colour introducing the narrative of the blue rose against the burgundy of the wilted roses. Every detail has been placed with intention. This is our gift from the heart of South Africa to the world.
+
+Welcome to the City Stories.`,
+    coverImage: cityStories1,
+    images: [cityStories1, cityStories2, cityStories3, cityStories4],
   },
   {
     id: "the-perfect-shirt",
-    title: "The Perfect Shirt — Collectors Edition",
+    title: "The Perfect Shirt",
     season: "SS23",
-    foreword: "Documenting The Capsule",
+    foreword: "Documenting : Behind The Capsule",
     description: `While there was no campaign direction for the perfect shirt series — the name of this t-shirt series was derived from a comment by one of our people named Resego Leserwane. This capsule was a sequel to the founding movement of the Live. Breathe. Dress For It. — which was an awareness march that highly impacted the creative landscape of Bloemfontein.
 
 This march was a call to like-minded people to establish a collective economy — a creative movement that will liberate and equip individuals to blueprint their dreams through the transformative power of fashion.
 
 This capsule is the most admired yet the rarest to find. The first product to be curated by Dripenomics — a classic. We now refer to it as the Collectors Edition.`,
-    coverImage: productFront,
-    images: [productFront, productBack, editorialHorse],
+    coverImage: collectors1,
+    images: [collectors1, collectors2, collectors3, collectors4],
   },
 ];
 
@@ -60,7 +67,7 @@ const Lookbooks = () => {
                 className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start`}
               >
                 {/* Cover Image */}
-                <div className={`editorial-image aspect-[3/4] ${index % 2 === 1 ? "lg:order-2" : ""}`}>
+                <div className={`editorial-image aspect-[3/4] max-w-lg mx-auto lg:mx-0 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <img
                     src={lookbook.coverImage}
                     alt={lookbook.title}
@@ -81,9 +88,9 @@ const Lookbooks = () => {
                   </div>
 
                   {/* Preview Images */}
-                  <div className="grid grid-cols-3 gap-4 mb-8">
-                    {lookbook.images.slice(0, 3).map((image, imgIndex) => (
-                      <div key={imgIndex} className="aspect-square editorial-image">
+                  <div className="grid grid-cols-4 gap-3 mb-8">
+                    {lookbook.images.map((image, imgIndex) => (
+                      <div key={imgIndex} className="aspect-[3/4] editorial-image">
                         <img
                           src={image}
                           alt={`${lookbook.title} preview ${imgIndex + 1}`}
@@ -93,8 +100,8 @@ const Lookbooks = () => {
                     ))}
                   </div>
 
-                  <Link to={`/lookbook/${lookbook.id}`} className="btn-outline">
-                    View Full Lookbook
+                  <Link to="/shop" className="btn-outline">
+                    Shop Collection
                   </Link>
                 </div>
               </article>

@@ -5,6 +5,8 @@ import ProductCard from "@/components/shop/ProductCard";
 import { SlidersHorizontal, ChevronDown } from "lucide-react";
 import productBack from "@/assets/product-prelude-back.jpg";
 import productFront from "@/assets/product-prelude-front.jpg";
+import perfectShirt1 from "@/assets/perfect-shirt-1.jpg";
+import perfectShirt2 from "@/assets/perfect-shirt-2.jpg";
 
 // Product data with full descriptions
 const allProducts = [
@@ -37,7 +39,7 @@ const allProducts = [
     name: "SS23 : The Perfect Shirt",
     price: 575,
     currency: "ZAR",
-    images: [productFront, productBack],
+    images: [perfectShirt1, perfectShirt2],
     soldOut: false,
     sizes: ["XS", "S", "M", "L"],
     collection: "Collectors Edition",
