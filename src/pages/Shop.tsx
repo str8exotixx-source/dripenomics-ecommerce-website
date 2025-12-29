@@ -6,7 +6,7 @@ import { SlidersHorizontal, ChevronDown } from "lucide-react";
 import productBack from "@/assets/product-prelude-back.jpg";
 import productFront from "@/assets/product-prelude-front.jpg";
 
-// Sample products - replace with real data from Shopify
+// Product data with full descriptions
 const allProducts = [
   {
     id: "1",
@@ -15,18 +15,46 @@ const allProducts = [
     currency: "ZAR",
     images: [productBack, productFront],
     soldOut: false,
-    sizes: ["XS", "S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L"],
     collection: "City Stories",
+    description: "A foreword to the City Stories capsule — depicting the story of a blue rose that blooms amongst wilted roses. We pay homage to the journey of creators who defy conventional norms and blueprint their dreams.",
+    details: [
+      "100% Comb Cotton",
+      "240 gsm",
+      "High Crew Neck"
+    ],
+    care: [
+      "Cold wash inside out (gentle cycle)",
+      "Do not bleach or Use fabric softener",
+      "Line dry in shade or Tumble dry low",
+      "Iron on reverse side (low heat only)",
+      "Avoid direct contact with print",
+      "Store folded or On soft hangers"
+    ]
   },
   {
     id: "2",
-    name: "City Stories Signature Tee",
+    name: "SS23 : The Perfect Shirt",
     price: 575,
     currency: "ZAR",
     images: [productFront, productBack],
     soldOut: false,
-    sizes: ["S", "M", "L"],
-    collection: "City Stories",
+    sizes: ["XS", "S", "M", "L"],
+    collection: "Collectors Edition",
+    description: "A sequel to the Collective Economy — this t-shirt embodies a contemporary minimalistic approach. It is a collectors edition known as the Perfect Shirt — due to its signature cropped silhouette.",
+    details: [
+      "100% Cotton",
+      "180 gsm",
+      "Classic Crew Neck"
+    ],
+    care: [
+      "Cold wash inside out (gentle cycle)",
+      "Do not bleach or Use fabric softener",
+      "Line dry in shade or Tumble dry low",
+      "Iron on reverse side (low heat only)",
+      "Avoid direct contact with print",
+      "Store folded or On soft hangers"
+    ]
   },
 ];
 
@@ -41,7 +69,13 @@ const Shop = () => {
       {/* Page Header */}
       <section className="pt-32 pb-12 border-b border-border">
         <div className="container mx-auto px-6">
-          <h1 className="brand-title text-4xl md:text-5xl text-center">Products</h1>
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="brand-subtitle text-muted-foreground mb-4">Shop</p>
+            <h1 className="brand-title text-4xl md:text-5xl mb-6">Catalogue</h1>
+            <p className="text-muted-foreground">
+              Welcome to our catalogue — a curated collection designed to inspire and connect you with what matters most — yourself.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -86,7 +120,7 @@ const Shop = () => {
                   <select className="w-full appearance-none bg-secondary px-4 py-3 pr-10 text-sm tracking-wider focus:outline-none focus:ring-1 focus:ring-foreground">
                     <option value="">All Collections</option>
                     <option value="city-stories">City Stories</option>
-                    <option value="essentials">Essentials</option>
+                    <option value="collectors-edition">Collectors Edition</option>
                   </select>
                   <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                 </div>
@@ -100,7 +134,6 @@ const Shop = () => {
                     <option value="s">S</option>
                     <option value="m">M</option>
                     <option value="l">L</option>
-                    <option value="xl">XL</option>
                   </select>
                   <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                 </div>

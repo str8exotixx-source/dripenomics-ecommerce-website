@@ -10,31 +10,31 @@ const BrandStory = () => {
           <div className="editorial-image aspect-[3/4] lg:aspect-auto lg:h-[700px]">
             <img
               src={editorialImage}
-              alt="Dripenomics editorial featuring City Stories collection"
+              alt="Dripenomics editorial - Live Breathe Dress For It"
               className="w-full h-full object-cover"
             />
           </div>
 
           {/* Content */}
           <div className="lg:pl-8">
-            <p className="brand-subtitle text-muted-foreground mb-4">Our Story</p>
+            <p className="brand-subtitle text-muted-foreground mb-4">Our Philosophy</p>
             <h2 className="brand-title text-3xl md:text-4xl mb-8">
-              Foreword — Behind The City Stories
+              Live. Breathe. Dress For It.
             </h2>
             <div className="space-y-6 text-muted-foreground text-justified">
               <p>
-                When we first envisioned City Stories, it was far beyond trends and meaningless aesthetics. It was a quiet, deliberate act of remembering what was, what is, and what triumphs today.
+                Embodies the idea that your identity is expressed through every aspect of your life. Especially how you dress.
               </p>
               <p>
-                We sought to create a brand that speaks to the soul of the urban experience — the hustle, the dreams, the stories written on every street corner. Dripenomics is not just clothing; it's a narrative woven into fabric.
+                We believe that fashion is more than fabric — it's a language, a statement, a way of moving through the world with intention and purpose.
               </p>
               <p>
-                Not only do we pay homage to the origins of our cultural heritage, but we also celebrate the collective journey of those who dare to live, breathe, and dress for the life they envision.
+                Each piece we create carries the weight of our collective narrative, designed for those who understand that style is where fashion meets identity.
               </p>
             </div>
             <div className="mt-10">
               <Link to="/about" className="btn-outline">
-                Read More
+                Discover Our Story
               </Link>
             </div>
           </div>

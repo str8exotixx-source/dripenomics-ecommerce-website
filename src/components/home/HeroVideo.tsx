@@ -20,27 +20,30 @@ const HeroVideo = () => {
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
         <div className="animate-fade-up">
-          <p className="brand-subtitle text-primary-foreground mb-4 opacity-90">
-            City Stories — The Prelude Capsule
+          <p className="brand-subtitle text-primary-foreground/80 mb-2 text-xs tracking-[0.3em]">
+            Founded in 2024
           </p>
-          <h1 className="brand-title text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-6">
-            Launching January 2025
+          <h1 className="brand-title text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-4">
+            Welcome to Dripenomics
           </h1>
-          <p className="text-primary-foreground/80 text-sm md:text-base max-w-md mx-auto mb-10">
-            An editorial collection paying homage to the origins of our cultural heritage.
+          <p className="brand-subtitle text-primary-foreground/90 text-sm md:text-base tracking-[0.2em] mb-6">
+            Retro Minimalism — Made in Africa
+          </p>
+          <p className="text-primary-foreground/70 text-sm md:text-base max-w-lg mx-auto mb-10">
+            Dripenomics reflects a quiet blend of heritage and contemporary minimalism — creating clothing that is both timeless and impactful to those who value aesthetic appeal and quality craftsmanship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/shop"
+              to="/about"
               className="bg-primary-foreground text-foreground px-10 py-4 tracking-widest uppercase text-xs font-medium transition-all duration-300 hover:bg-primary-foreground/90"
             >
-              Shop Collection
+              About Us
             </Link>
             <Link
-              to="/lookbooks"
+              to="/shop"
               className="border border-primary-foreground text-primary-foreground px-10 py-4 tracking-widest uppercase text-xs font-medium transition-all duration-300 hover:bg-primary-foreground/10"
             >
-              View Lookbook
+              Shop Collection
             </Link>
           </div>
         </div>

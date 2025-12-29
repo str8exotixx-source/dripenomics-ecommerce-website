@@ -12,16 +12,16 @@ const featuredProducts = [
     currency: "ZAR",
     images: [productBack, productFront],
     soldOut: false,
-    sizes: ["XS", "S", "M", "L", "XL"],
+    sizes: ["XS", "S", "M", "L"],
   },
   {
     id: "2",
-    name: "City Stories Signature Tee",
+    name: "SS23 : The Perfect Shirt",
     price: 575,
     currency: "ZAR",
     images: [productFront, productBack],
     soldOut: false,
-    sizes: ["S", "M", "L"],
+    sizes: ["XS", "S", "M", "L"],
   },
 ];
 
@@ -31,10 +31,10 @@ const FeaturedCollection = () => {
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <p className="brand-subtitle text-muted-foreground mb-4">New In</p>
-          <h2 className="brand-title text-3xl md:text-4xl mb-6">Featured Collection</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Discover our latest pieces from the City Stories capsule — where cultural heritage meets contemporary streetwear.
+          <p className="brand-subtitle text-muted-foreground mb-4">Shop The Look</p>
+          <h2 className="brand-title text-3xl md:text-4xl mb-6">Featured Collections</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            This is beyond aesthetic appeal. Dripenomics is a brand founded on the principle of transformation to assert a simple truth — clothing has a profound impact on identity and purpose.
           </p>
         </div>
 

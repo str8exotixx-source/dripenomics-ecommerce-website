@@ -10,6 +10,9 @@ import About from "./pages/About";
 import Lookbooks from "./pages/Lookbooks";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
+import Collaborations from "./pages/Collaborations";
+import Events from "./pages/Events";
+import Newsletters from "./pages/Newsletters";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +31,9 @@ const App = () => (
           <Route path="/lookbooks" element={<Lookbooks />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/collaborations" element={<Collaborations />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/newsletters" element={<Newsletters />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
