@@ -14,10 +14,10 @@ const About = () => {
           <div className="max-w-4xl mx-auto text-center">
             <p className="brand-subtitle text-muted-foreground mb-4">About Us</p>
             <h1 className="brand-title text-4xl md:text-5xl lg:text-6xl mb-8">
-              Cultural Impact Through Fashion
+              Our Story
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Dripenomics is more than a clothing brand — it's a movement that bridges cultural heritage with contemporary expression.
+              We founded Dripenomics in 2024 for a simple purpose, to reveal how fashion transforms identity and moves culture forward.
             </p>
           </div>
         </div>
@@ -35,95 +35,78 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="brand-subtitle text-muted-foreground mb-4">Our Mission</p>
+              <p className="brand-subtitle text-muted-foreground mb-4">Our Vision</p>
               <h2 className="brand-title text-3xl md:text-4xl mb-8">
-                Live . Breathe . Dress For It .
+                Retro Minimalism — Made in Africa
               </h2>
               <div className="space-y-6 text-muted-foreground text-justified">
                 <p>
-                  When we first envisioned Dripenomics, it was far beyond trends and meaningless aesthetics. It was a quiet, deliberate act of remembering what was, what is, and what triumphs today.
+                  Blending retro minimalism with cultural narrative and quality craftsmanship to curate editorial campaigns that will impact our community beyond visual appeal.
                 </p>
                 <p>
-                  We sought to create a brand that speaks to the soul of the urban experience — the hustle, the dreams, the stories written on every street corner. Every piece we create carries the weight of our collective narrative.
+                  We believe in the transformative power of fashion — not just as clothing, but as a medium for self-expression, cultural dialogue, and community building.
                 </p>
                 <p>
-                  From the streets of Johannesburg to cities across the globe, Dripenomics represents the spirit of those who refuse to be ordinary. We are the storytellers, the dreamers, the ones who understand that fashion is merely the canvas for a much larger conversation.
+                  Every piece we create is a deliberate act of remembering what was, celebrating what is, and envisioning what triumphs ahead.
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cultural Impact Section */}
+      <section className="py-20 bg-background-cream">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <p className="brand-subtitle text-muted-foreground mb-4 text-center">Our Impact</p>
+            <h2 className="brand-title text-3xl md:text-4xl mb-12 text-center">
+              Cultural Impact Through Fashion
+            </h2>
+
+            <div className="space-y-8 text-muted-foreground text-justified">
+              <p>
+                For the past few years Dripenomics has immersed itself within the creative landscape of Bloemfontein — fostering local art exchange, redefining relationships between art and audience and driving economic growth through community engagement and storytelling through their community orientated fashion experiences — the Creative Footprint.
+              </p>
+              <p>
+                The brand moves beyond traditional retail by organising pop-ups and exhibitions that blur the lines between artist and audience. Redefining fashion engagement. The brand is associated with a creative strategy that involves using fashion, film and cultural narratives to explore identity.
+              </p>
+              <p>
+                Dripenomics is notably popular within the student community and has an impact on contemporary youth fashion trends and lifestyle choices in South Africa. Driving collaboration within the local creative ecosystem which results in economic empowerment.
+              </p>
+              <p>
+                In essence, their impact stems from their ability to blend global fashion strategies with local values and narratives.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-background-cream">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <p className="brand-subtitle text-muted-foreground mb-4 text-center">Our Values</p>
-            <h2 className="brand-title text-3xl md:text-4xl mb-16 text-center">
-              What We Stand For
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-6 border border-foreground flex items-center justify-center">
-                  <span className="brand-title text-2xl">01</span>
-                </div>
-                <h3 className="brand-subtitle mb-4">Authenticity</h3>
-                <p className="text-sm text-muted-foreground">
-                  Every design tells a genuine story rooted in our cultural heritage and lived experiences.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-6 border border-foreground flex items-center justify-center">
-                  <span className="brand-title text-2xl">02</span>
-                </div>
-                <h3 className="brand-subtitle mb-4">Quality</h3>
-                <p className="text-sm text-muted-foreground">
-                  Premium materials and meticulous craftsmanship ensure pieces that stand the test of time.
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-6 border border-foreground flex items-center justify-center">
-                  <span className="brand-title text-2xl">03</span>
-                </div>
-                <h3 className="brand-subtitle mb-4">Community</h3>
-                <p className="text-sm text-muted-foreground">
-                  Building a global collective of individuals who share our vision and values.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team/Origin Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="order-2 lg:order-1">
-              <p className="brand-subtitle text-muted-foreground mb-4">Our Origin</p>
+              <p className="brand-subtitle text-muted-foreground mb-4">The Creative Footprint</p>
               <h2 className="brand-title text-3xl md:text-4xl mb-8">
-                Born From The City
+                Beyond Traditional Retail
               </h2>
               <div className="space-y-6 text-muted-foreground text-justified">
                 <p>
-                  Dripenomics was founded in the heart of South Africa, where diverse cultures intersect and inspire. Our designs draw from the rich tapestry of African heritage while embracing global streetwear influences.
+                  We organise pop-ups and exhibitions that blur the lines between artist and audience, redefining fashion engagement through immersive experiences.
                 </p>
                 <p>
-                  Each collection is a chapter in our ongoing story — a narrative that celebrates resilience, creativity, and the unapologetic pursuit of excellence. We don't just make clothes; we craft wearable art that resonates with the modern dreamer.
+                  Our creative strategy involves using fashion, film, and cultural narratives to explore identity — creating moments that resonate beyond the runway.
                 </p>
                 <p>
-                  Join us in redefining what it means to dress with intention. Every thread, every stitch, every print carries the essence of our journey.
+                  Through collaboration within the local creative ecosystem, we drive economic empowerment and foster meaningful connections within our community.
                 </p>
               </div>
             </div>
             <div className="editorial-image aspect-[3/4] order-1 lg:order-2">
               <img
                 src={productFront}
-                alt="Dripenomics founder"
+                alt="Dripenomics community"
                 className="w-full h-full object-cover"
               />
             </div>

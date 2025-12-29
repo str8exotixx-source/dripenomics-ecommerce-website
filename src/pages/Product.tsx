@@ -8,30 +8,65 @@ import { toast } from "sonner";
 import productBack from "@/assets/product-prelude-back.jpg";
 import productFront from "@/assets/product-prelude-front.jpg";
 
-// Sample product data - replace with real data
-const sampleProduct = {
-  id: "1",
-  name: "AW25 : The Prelude T-Shirt",
-  price: 845,
-  currency: "ZAR",
-  images: [productBack, productFront],
-  soldOut: false,
-  sizes: ["XS", "S", "M", "L", "XL"],
-  description: "In a foreword to the city, itself, this collection bridges seemingly disparate elements into one cohesive tapestry, illustrating the duality of our existence. Commemorating the 207th anniversary of our late great grandmother's blue rose that blossomed in a garden filled with concrete.",
-  details: [
-    "100% Premium Cotton",
-    "Heavyweight 240gsm",
-    "Oversized fit",
-    "Screen printed graphics",
-    "Made in South Africa"
-  ],
-  care: [
-    "Machine wash cold",
-    "Do not bleach",
-    "Tumble dry low",
-    "Iron on low heat",
-    "Do not dry clean"
-  ]
+// Product data with official copy
+const products: Record<string, {
+  id: string;
+  name: string;
+  price: number;
+  currency: string;
+  images: string[];
+  soldOut: boolean;
+  sizes: string[];
+  description: string;
+  details: string[];
+  care: string[];
+}> = {
+  "1": {
+    id: "1",
+    name: "AW25 : The Prelude T-Shirt",
+    price: 845,
+    currency: "ZAR",
+    images: [productBack, productFront],
+    soldOut: false,
+    sizes: ["XS", "S", "M", "L"],
+    description: "A foreword to the City Stories capsule — depicting the story of a blue rose that blooms amongst wilted roses. We pay homage to the journey of creators who defy conventional norms and blueprint their dreams.",
+    details: [
+      "100% Comb Cotton",
+      "240 gsm",
+      "High Crew Neck"
+    ],
+    care: [
+      "Cold wash inside out (gentle cycle)",
+      "Do not bleach or Use fabric softener",
+      "Line dry in shade or Tumble dry low",
+      "Iron on reverse side (low heat only)",
+      "Avoid direct contact with print",
+      "Store folded or On soft hangers"
+    ]
+  },
+  "2": {
+    id: "2",
+    name: "SS23 : The Perfect Shirt",
+    price: 575,
+    currency: "ZAR",
+    images: [productFront, productBack],
+    soldOut: false,
+    sizes: ["XS", "S", "M", "L"],
+    description: "A sequel to the Collective Economy — this t-shirt embodies a contemporary minimalistic approach. It is a collectors edition known as the Perfect Shirt — due to its signature cropped silhouette.",
+    details: [
+      "100% Cotton",
+      "180 gsm",
+      "Classic Crew Neck"
+    ],
+    care: [
+      "Cold wash inside out (gentle cycle)",
+      "Do not bleach or Use fabric softener",
+      "Line dry in shade or Tumble dry low",
+      "Iron on reverse side (low heat only)",
+      "Avoid direct contact with print",
+      "Store folded or On soft hangers"
+    ]
+  }
 };
 
 const Product = () => {
@@ -41,7 +76,7 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [currency, setCurrency] = useState<"ZAR" | "USD">("ZAR");
 
-  const product = sampleProduct; // Replace with actual product fetch
+  const product = products[id || "1"] || products["1"];
 
   const formatPrice = (price: number) => {
     if (currency === "USD") {
@@ -75,7 +110,7 @@ const Product = () => {
         <div className="container mx-auto px-6">
           <nav className="text-sm text-muted-foreground">
             <Link to="/shop" className="hover:text-foreground transition-colors">
-              Products
+              Catalogue
             </Link>
             <span className="mx-2">/</span>
             <span className="text-foreground">{product.name}</span>
@@ -245,20 +280,20 @@ const Product = () => {
 
                 {/* Details */}
                 <div className="mb-6">
-                  <h3 className="brand-subtitle text-xs mb-3">Details</h3>
+                  <h3 className="brand-subtitle text-xs mb-3">Description</h3>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     {product.details.map((detail, index) => (
-                      <li key={index}>— {detail}</li>
+                      <li key={index}>• {detail}</li>
                     ))}
                   </ul>
                 </div>
 
                 {/* Care Instructions */}
                 <div>
-                  <h3 className="brand-subtitle text-xs mb-3">Care</h3>
+                  <h3 className="brand-subtitle text-xs mb-3">Care Guide</h3>
                   <ul className="space-y-1 text-sm text-muted-foreground">
                     {product.care.map((instruction, index) => (
-                      <li key={index}>— {instruction}</li>
+                      <li key={index}>• {instruction}</li>
                     ))}
                   </ul>
                 </div>
