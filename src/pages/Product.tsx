@@ -7,6 +7,8 @@ import { cn } from "@/lib/utils";
 import { toast } from "sonner";
 import productBack from "@/assets/product-prelude-back.jpg";
 import productFront from "@/assets/product-prelude-front.jpg";
+import perfectShirt1 from "@/assets/perfect-shirt-1.jpg";
+import perfectShirt2 from "@/assets/perfect-shirt-2.jpg";
 
 // Product data with official copy
 const products: Record<string, {
@@ -49,7 +51,7 @@ const products: Record<string, {
     name: "SS23 : The Perfect Shirt",
     price: 575,
     currency: "ZAR",
-    images: [productFront, productBack],
+    images: [perfectShirt1, perfectShirt2],
     soldOut: false,
     sizes: ["XS", "S", "M", "L"],
     description: "A sequel to the Collective Economy — this t-shirt embodies a contemporary minimalistic approach. It is a collectors edition known as the Perfect Shirt — due to its signature cropped silhouette.",
