@@ -65,16 +65,16 @@ const Shop = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Page Header */}
-      <section className="pt-32 pb-12 border-b border-border">
-        <div className="container mx-auto px-6">
+      <section className="pt-24 md:pt-32 pb-8 md:pb-12 border-b border-border">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-2xl mx-auto text-center">
-            <p className="brand-subtitle text-muted-foreground mb-4">Shop</p>
-            <h1 className="brand-title text-4xl md:text-5xl mb-6">Catalogue</h1>
-            <p className="text-muted-foreground">
+            <p className="brand-subtitle text-muted-foreground mb-3 md:mb-4">Shop</p>
+            <h1 className="brand-title text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-6">Catalogue</h1>
+            <p className="text-muted-foreground text-sm md:text-base px-2">
               Welcome to our catalogue — a curated collection designed to inspire and connect you with what matters most — yourself.
             </p>
           </div>

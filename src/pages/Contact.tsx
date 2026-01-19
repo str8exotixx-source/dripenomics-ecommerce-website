@@ -33,16 +33,16 @@ const Contact = () => {
   };
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Page Header */}
-      <section className="pt-32 pb-16">
-        <div className="container mx-auto px-6">
+      <section className="pt-24 md:pt-32 pb-8 md:pb-16">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="brand-subtitle text-muted-foreground mb-4">Get In Touch</p>
-            <h1 className="brand-title text-4xl md:text-5xl mb-6">Contact Us</h1>
-            <p className="text-muted-foreground">
+            <p className="brand-subtitle text-muted-foreground mb-3 md:mb-4">Get In Touch</p>
+            <h1 className="brand-title text-2xl md:text-4xl lg:text-5xl mb-4 md:mb-6">Contact Us</h1>
+            <p className="text-muted-foreground text-sm md:text-base px-2">
               Have a question, collaboration idea, or just want to connect? We'd love to hear from you.
             </p>
           </div>

@@ -16,6 +16,7 @@ const lookbooksData: Record<string, {
   foreword: string;
   description: string;
   images: string[];
+  productId: string;
 }> = {
   "city-stories": {
     title: "City Stories",
@@ -27,6 +28,7 @@ This capsule is grounded upon retro minimalism — a visual blueprint birthed fr
 
 Welcome to the City Stories.`,
     images: [cityStories1, cityStories2, cityStories3, cityStories4],
+    productId: "1",
   },
   "the-perfect-shirt": {
     title: "The Perfect Shirt",
@@ -38,6 +40,7 @@ This march was a call to like-minded people to establish a collective economy �
 
 This capsule is the most admired yet the rarest to find. The first product to be curated by Dripenomics — a classic. We now refer to it as the Collectors Edition.`,
     images: [collectors1, collectors2, collectors3, collectors4],
+    productId: "2",
   },
 };
 
@@ -111,7 +114,7 @@ const LookbookDetail = () => {
           <h2 className="brand-title text-xl md:text-3xl mb-4 md:mb-6">
             Shop The Collection
           </h2>
-          <Link to="/shop" className="btn-primary">
+          <Link to={`/product/${lookbook.productId}`} className="btn-primary">
             Shop Now
           </Link>
         </div>
