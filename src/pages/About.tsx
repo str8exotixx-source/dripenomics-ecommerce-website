@@ -5,18 +5,18 @@ import collectors2 from "@/assets/collectors-2.jpg";
 
 const About = () => {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20">
-        <div className="container mx-auto px-6">
+      <section className="pt-24 md:pt-32 pb-12 md:pb-20">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="brand-subtitle text-muted-foreground mb-4">About Us</p>
-            <h1 className="brand-title text-4xl md:text-5xl lg:text-6xl mb-8">
+            <p className="brand-subtitle text-muted-foreground mb-3 md:mb-4">About Us</p>
+            <h1 className="brand-title text-2xl md:text-4xl lg:text-5xl mb-6 md:mb-8">
               Our Story
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm md:text-lg max-w-2xl mx-auto px-2">
               We founded Dripenomics in 2024 for a simple purpose, to reveal how fashion transforms identity and moves culture forward.
             </p>
           </div>
@@ -24,9 +24,9 @@ const About = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="pb-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <section className="pb-16 md:pb-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
             <div className="editorial-image aspect-[3/4] max-w-md mx-auto lg:mx-0">
               <img
                 src={cityStories1}
@@ -35,11 +35,7 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="brand-subtitle text-muted-foreground mb-4">Our Vision</p>
-              <h2 className="brand-title text-3xl md:text-4xl mb-8">
-                Retro Minimalism — Made in Africa
-              </h2>
-              <div className="space-y-6 text-muted-foreground text-justified">
+              <div className="space-y-4 md:space-y-6 text-muted-foreground text-justified">
                 <p>
                   Blending retro minimalism with cultural narrative and quality craftsmanship to curate editorial campaigns that will impact our community beyond visual appeal.
                 </p>
@@ -56,15 +52,15 @@ const About = () => {
       </section>
 
       {/* Cultural Impact Section */}
-      <section className="py-20 bg-background-cream">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-20 bg-background-cream">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <p className="brand-subtitle text-muted-foreground mb-4 text-center">Our Impact</p>
-            <h2 className="brand-title text-3xl md:text-4xl mb-12 text-center">
+            <p className="brand-subtitle text-muted-foreground mb-3 md:mb-4 text-center">Our Impact</p>
+            <h2 className="brand-title text-xl md:text-3xl lg:text-4xl mb-8 md:mb-12 text-center">
               Cultural Impact Through Fashion
             </h2>
 
-            <div className="space-y-8 text-muted-foreground text-justified">
+            <div className="space-y-4 md:space-y-8 text-muted-foreground text-justified text-sm md:text-base">
               <p>
                 For the past few years Dripenomics has immersed itself within the creative landscape of Bloemfontein — fostering local art exchange, redefining relationships between art and audience and driving economic growth through community engagement and storytelling through their community orientated fashion experiences — the Creative Footprint.
               </p>
@@ -83,15 +79,15 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <section className="py-12 md:py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center">
             <div className="order-2 lg:order-1">
-              <p className="brand-subtitle text-muted-foreground mb-4">The Creative Footprint</p>
-              <h2 className="brand-title text-3xl md:text-4xl mb-8">
+              <p className="brand-subtitle text-muted-foreground mb-3 md:mb-4">The Creative Footprint</p>
+              <h2 className="brand-title text-xl md:text-3xl lg:text-4xl mb-6 md:mb-8">
                 Beyond Traditional Retail
               </h2>
-              <div className="space-y-6 text-muted-foreground text-justified">
+              <div className="space-y-4 md:space-y-6 text-muted-foreground text-justified text-sm md:text-base">
                 <p>
                   We organise pop-ups and exhibitions that blur the lines between artist and audience, redefining fashion engagement through immersive experiences.
                 </p>
