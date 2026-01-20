@@ -70,7 +70,7 @@ const Cart = () => {
       <Navbar />
 
       {/* Page Header */}
-      <section className="pt-24 md:pt-32 pb-8 md:pb-12">
+      <section className="pt-28 md:pt-36 pb-8 md:pb-12">
         <div className="container mx-auto px-4 md:px-6">
           <h1 className="brand-title text-2xl md:text-4xl lg:text-5xl text-center">Your Cart</h1>
         </div>

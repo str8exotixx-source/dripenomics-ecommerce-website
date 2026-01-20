@@ -9,7 +9,7 @@ const About = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-24 md:pt-32 pb-12 md:pb-20">
+      <section className="pt-28 md:pt-36 pb-12 md:pb-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <p className="brand-subtitle text-muted-foreground mb-3 md:mb-4">About Us</p>

@@ -15,6 +15,7 @@ import Cart from "./pages/Cart";
 import Collaborations from "./pages/Collaborations";
 import Events from "./pages/Events";
 import Newsletters from "./pages/Newsletters";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +39,7 @@ const App = () => (
           <Route path="/collaborations" element={<Collaborations />} />
           <Route path="/events" element={<Events />} />
           <Route path="/newsletters" element={<Newsletters />} />
+          <Route path="/auth" element={<Auth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

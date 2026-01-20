@@ -108,7 +108,7 @@ const Product = () => {
       <Navbar />
 
       {/* Breadcrumb */}
-      <section className="pt-28 pb-4">
+      <section className="pt-28 md:pt-36 pb-4">
         <div className="container mx-auto px-6">
           <nav className="text-sm text-muted-foreground">
             <Link to="/shop" className="hover:text-foreground transition-colors">
