@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, Search, ShoppingBag } from "lucide-react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Menu, Search, ShoppingBag, User, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { supabase } from "@/integrations/supabase/client";
+import { User as SupabaseUser, Session } from "@supabase/supabase-js";
+import { toast } from "sonner";
 
 const navLinks = [
   { name: "Catalogue", href: "/shop" },
@@ -26,7 +29,10 @@ const announcements = [
 const Navbar = () => {
   const [cartCount] = useState(0);
   const [currentAnnouncement, setCurrentAnnouncement] = useState(0);
+  const [user, setUser] = useState<SupabaseUser | null>(null);
+  const [session, setSession] = useState<Session | null>(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,6 +40,30 @@ const Navbar = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    // Set up auth state listener
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (event, session) => {
+        setSession(session);
+        setUser(session?.user ?? null);
+      }
+    );
+
+    // Check for existing session
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+    toast.success("Signed out successfully");
+    navigate("/");
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
@@ -57,7 +87,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-4 md:px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Mobile Menu Toggle */}
           <Sheet>
@@ -83,6 +113,25 @@ const Navbar = () => {
                     {link.name}
                   </Link>
                 ))}
+                <div className="border-t border-border pt-6">
+                  {user ? (
+                    <button
+                      onClick={handleSignOut}
+                      className="brand-subtitle text-lg transition-opacity hover:opacity-60 flex items-center gap-2"
+                    >
+                      <LogOut size={18} />
+                      Sign Out
+                    </button>
+                  ) : (
+                    <Link
+                      to="/auth"
+                      className="brand-subtitle text-lg transition-opacity hover:opacity-60 flex items-center gap-2"
+                    >
+                      <User size={18} />
+                      Sign In
+                    </Link>
+                  )}
+                </div>
               </div>
             </SheetContent>
           </Sheet>
@@ -128,13 +177,31 @@ const Navbar = () => {
           </div>
 
           {/* Icons - Right */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-2 md:space-x-4">
             <button
-              className="p-2 transition-opacity hover:opacity-60 text-foreground"
+              className="p-2 transition-opacity hover:opacity-60 text-foreground hidden md:block"
               aria-label="Search"
             >
               <Search size={20} />
             </button>
+            {user ? (
+              <button
+                onClick={handleSignOut}
+                className="p-2 transition-opacity hover:opacity-60 text-foreground"
+                aria-label="Sign Out"
+                title="Sign Out"
+              >
+                <LogOut size={20} />
+              </button>
+            ) : (
+              <Link
+                to="/auth"
+                className="p-2 transition-opacity hover:opacity-60 text-foreground"
+                aria-label="Sign In"
+              >
+                <User size={20} />
+              </Link>
+            )}
             <Link
               to="/cart"
               className="p-2 transition-opacity hover:opacity-60 relative text-foreground"
