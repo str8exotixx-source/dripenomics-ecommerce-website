@@ -86,4 +86,6 @@ The application is configured for modern edge deployment. The production live si
 
 ## 📄 License
 
-This project is open-source. Contact me for specific licensing policies.
+Copyright © 2026. All rights reserved. 
+
+The software license and ownership of this codebase belong exclusively to the repository owner. Unauthorized copying, modification, or distribution of these files via any medium is strictly prohibited.
